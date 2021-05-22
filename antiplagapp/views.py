@@ -16,7 +16,6 @@ def index(request):
             open_list = []
             for file in files:
                 matcher = difflib.SequenceMatcher(None, open_last_file, file.document.readlines()).ratio()*100
-                print(matcher)
                 open_list.append(matcher)
             
             if len(open_list) < 1:
